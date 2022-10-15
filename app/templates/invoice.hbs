@@ -1,0 +1,71 @@
+{{page-title "Invoice"}}
+{{outlet}}
+
+{{!-- start of invoice section --}}
+<div id="invoice">
+<div class="jumbo" style="text-align: center; font-size: 32.5%; background:#d5d7da; color: rgb(0, 0, 0); padding-bottom:15px; padding-top:40px">
+  <h2>Invoice</h2>
+</div>
+
+<div class="jumbo" style="background-color:#f3f3f3">
+<h2 style="text-align: center; color: #000202 ">StelStay Properties</h2>
+</div>
+
+<div class="container-cp">
+    <div class="box-1cp">
+       <h3>Room type:</h3>
+       <h4>xxxx (retrieve room type from pb)</h4>
+       <br>
+       <h3>Room number:</h3>
+       <h4>xxxx (retrieve room number from pb)</h4>
+       <br>
+       <h3>Email:</h3>
+       <h4>xxxx (retrieve email from pb)</h4>
+    </div>
+
+    <div class="box-2cp">
+       <h3>Bill Payer:</h3>
+       <h4>xxxx (retrieve bill payer from pb)</h4>
+       <br>
+       <h3>Outstanding Amount:</h3>
+       <h4>xxxx (retrieve outstanding amount from pb)</h4>
+       <br>
+       {{!-- <h3>Date</h3>
+       <h4><span id="datetime"></span></h4>
+            <script>
+            var dt = new Date();
+            document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+            </script> --}}
+    </div>
+</div>
+</div>
+
+
+<br><br>
+
+
+<div style="padding-left: 100px; padding-right: 100px">
+        <button id="print" style="    
+        top:50%;
+        background-color:#000000;
+        color: #EFEFEF;
+        border:none; 
+        border-radius:10px; 
+        padding:15px;
+        min-height:30px; 
+        min-width: 100%" type="button">Print Invoice
+        </button>
+
+        {{!-- print invoice logic --}}
+        <script>
+            const printBtn = document.getElementById('print'); 
+
+            printBtn.addEventListener('click', function(){
+                console.log("generated invoice")
+                window.print(); 
+            })
+        </script>
+</div>
+
+<br><br>
+{{!-- end of invoice section --}}

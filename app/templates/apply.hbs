@@ -1,0 +1,99 @@
+{{page-title "Apply"}}
+
+<div class="jumbo" style="text-align: center; font-size: 65%; background:#39515e; color: white; padding-bottom:30px">
+  <h2>Apply</h2>
+</div>
+
+<form action=""> 
+    {{!-- pocketbase --}}
+<div class="container-1">
+
+<div class="box-1">
+    <h3>Personal Details of applicant</h3>
+    <br>
+    <input type="text" style="width: 70%;" placeholder="First Name">
+    <br>
+    <input type="text" style="width: 70%;" placeholder="Last Name">
+    <br>
+    <input type="text" style="width: 70%;" placeholder="Student Number">
+    <br>
+    <input type="text" style="width: 70%;" placeholder="ID Number">
+    <br>
+    <input type="text" style="width: 70%;" placeholder="Year of Study">
+    <br>
+    <input type="text" style="width: 70%;" placeholder="Program of Study">
+    <br>
+
+    
+
+</div>
+    <div class="box-2">
+    <h3>Contact Details of Applicant</h3>
+    <br>
+    <input type="text" style="width: 70%;" placeholder="Contact Number">
+    <br>
+    <input type="text" style="width: 70%;" placeholder="Alternative Number">
+    <br>
+    <input type="text" style="width: 70%;" placeholder=" ***Email address***">
+    <br>
+    <select id="country" name="type" style="width: 71%;">
+      <option value="australia">1 Bedroom: Soloist</option>
+      <option value="canada">2 Bedroom: Dualist</option>
+      <option value="usa">3 Bedroom: Trinity</option>
+    </select>
+    <br>
+    <input type="text" style="width: 70%;" placeholder="ID Number Roomate 1 (if applicable)">
+    <br>
+    <input type="text" style="width: 70%;" placeholder="ID Number Roomate 2 (if applicable)">
+    <br>
+    <input type="text" style="width: 70%;" placeholder="***Enter Password***">
+    <p style="font-size: 70%;">this will be your "My Living" password upon successful application</p>
+    <br>
+    <br>
+    <input type="submit" value="Submit" style="
+    width: 70%; background-color:#395159;
+    color: #EFEFEF;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;">
+    </div>
+
+
+
+    <div class="box-3">
+        <h3>Bill Payer Details</h3>
+        <br>
+            <input type="text" style="width: 70%;" placeholder="First Name">
+            <br>
+            <input type="text" style="width: 70%;" placeholder="Last Name">
+            <br>
+            <input type="text" style="width: 70%;" placeholder="ID Number">
+            <br>
+            <input type="text" style="width: 70%;" placeholder="Contact Number">
+            <br>
+            <input type="text" style="width: 70%;" placeholder="Email Adress">
+            <br>
+            <input type="file" id="myFile" name="BankStatement" style="width: 44%;" placeholder="Bank Statement"> Bank Statement
+
+            
+            {{!-- <input type="text" style="width: 60%;" placeholder="Upload 3 Month Bank Statement"> --}}
+            <br>
+        {{!-- <p style="justify-content: center;"></p> --}}
+
+
+
+    </div>
+</div> 
+
+
+
+</form>
+
+
+
+
+<ul>
+    {{#each @model as |formitem|}}
+        <li>{{apply.formitem}}</li>
+    {{/each}}
+</ul>

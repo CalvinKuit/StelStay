@@ -1,0 +1,76 @@
+{{page-title "StelStay"}}
+
+{{!-- navbar --}}
+
+<div class="jumbo">
+  <div class="right-tomster"></div>
+  <LinkTo @route="index">
+      <h2 style="text-align: center; color: #90A3A7 ">StelStay</h2>
+  </LinkTo>
+  <h3 style="text-align: center">Premium Accomodation</h3>
+
+  {{!-- <br> --}}
+
+
+{{!--   
+  <img src="/app/styles/public/assets/images/Bay-Oaks-Studio-Apartment.jpg" alt="Foudation"> --}}
+
+<br>
+
+
+
+<nav style="text-align: center; word-spacing: 48px;">
+    <LinkTo @route="about">
+        <ul style="display:inline; word-spacing: 0px">About Us</ul>
+    </LinkTo>
+    <LinkTo @route="rooms">
+            <ul style="display:inline">Rooms</ul>
+    </LinkTo>
+
+<LinkTo @route="apply">
+        <ul style="display:inline;">Apply</ul>
+</LinkTo>
+
+<LinkTo @route="my-living">
+      <ul style="display:inline; word-spacing: 0px" >My Living</ul>
+</LinkTo>
+
+
+</nav>
+
+
+
+</div>
+{{!-- navbar --}}
+
+
+
+{{outlet}}
+
+
+
+{{!-- footer --}}
+
+
+{{!-- <div class="footer">
+  <p class="footer-text-left">
+    <a>home</a>
+    <a>about</a> 
+    <a>credits</a>
+  </p>
+</div> --}}
+
+
+<br><br><br><br><br>
+
+<div class="footer">
+  <p class="footer-text-left">
+    {{!-- <a href="index.html" class="menu">home</a>
+    <a href="https://css.sammy-codes.com/about.html" class="menu">about</a> 
+    <a href="https://css.sammy-codes.com/credits.html" class="menu">credits</a> --}}
+    
+    <ul style="font-family: arial; font-size: 14px">77 Cluver Street, Stellenbosch</ul>
+    <ul style="font-family: arial; font-size: 14px">admin@stelstay.co.za</ul>
+    <ul style="font-family: arial ; font-size: 12px; font-weight:bold; padding-top: 5px">A Website by Babbage Systems</ul>
+  </p>
+</div>

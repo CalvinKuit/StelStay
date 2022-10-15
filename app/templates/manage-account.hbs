@@ -1,0 +1,264 @@
+{{page-title "ManageAccount"}}
+{{outlet}}
+
+<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+<div class="jumbo" style="text-align: center; font-size: 65%; background:#39515e; color: white; padding-bottom:30px">
+  <h2>My Living</h2>
+</div>
+
+
+
+{{!-- manage account starts here --}}
+<div class="jumbo" style="text-align: center; font-size: 32.5%; background:#d5d7da; color: rgb(0, 0, 0); padding-bottom:15px; padding-top:40px">
+  <h2>My Details</h2>
+</div>
+
+
+<div class="container-cp" style="text-align: center;">
+    <div class="box-1cp">
+       <h3>Wi-fi:</h3>
+       <h4>xxxx (retrieve room type from pb)</h4>
+       <br>
+       <h3>Room number:</h3>
+       <h4>xxxx (retrieve room number from pb)</h4>
+       <br>
+       <h3>Email:</h3>
+       <h4>xxxx (retrieve email from pb)</h4> <br>
+       <p style="font-size: 100%; text-align: center;  color: rgb(128, 150, 171)">Contact admin if you would like to update any of these details.</p>
+        
+    </div>
+
+    <div class="box-2cp" style="text-align: center;">
+       <h3>Bill Payer:</h3>
+       <h4>xxxx (retrieve bill payer from pb)</h4>
+       <br>
+       <h3>Parking Number</h3>
+       <h4>xxxx (retrieve outstanding amount from pb)</h4>
+       <br>
+        <h3>Address</h3>
+       <h4>77 Cluver, StelStay, Stellenbosch, Westen Cape, 7200</h4>
+      
+       {{!-- <h3>Date</h3>
+       <h4><span id="datetime"></span></h4>
+            <script>
+            var dt = new Date();
+            document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+            </script> --}} <br>
+        <p style="font-size: 100%; text-align: center;  color: rgb(128, 150, 171)">Download/Print the Invoice below in order to obtain proof of residence</p>
+
+        
+    </div>
+</div>
+<br>
+
+
+<div class="jumbo" style="text-align: center; font-size: 32.5%; background:#d5d7da; color: rgb(0, 0, 0); padding-bottom:15px; padding-top:40px">
+  <h2>Services</h2>
+</div>
+
+
+{{!-- buttons --}}
+    <div style="padding-left: 100px; padding-right: 100px; padding-top: 25px;  justify-content: center; text-align: center; word-spacing: 100px;">
+
+        {{!-- forum button --}}
+        {{!-- <button type="button" style="    top:50%;
+        background-color:#395159;
+        color: #EFEFEF;0
+        border:none; 
+        border-radius:10px; 
+        padding:15px;
+        min-height:30px; 
+        min-width: 240px">Forum
+        </button> --}}
+
+        <button type="button" style="    top:50%;
+        background-color:#395159;
+        color: #EFEFEF;
+        border:none; 
+        border-radius:10px; 
+        padding:15px;
+        min-height:30px; 
+        min-width: 200px">Parking
+        </button>
+
+
+        <button type="button" style="    top:50%;
+        background-color:#395159;
+        color: #EFEFEF;
+        border:none; 
+        border-radius:10px; 
+        padding:15px;
+        min-height:30px; 
+        min-width: 200px">Wi-fi Top-up
+        </button>
+
+        {{!-- <button type="button" style="    top:50%;
+        background-color:#395159;
+        color: #EFEFEF;
+        border:none; 
+        border-radius:10px; 
+        padding:15px;
+        min-height:30px; 
+        min-width: 200px"> Print Invoice
+        </button> --}}
+
+{{!-- onClick="window.print()"  --}}
+
+        <button type="button" style="    top:50%;
+        background-color:#395159;
+        color: #EFEFEF;
+        border:none; 
+        border-radius:10px; 
+        padding:15px;
+        min-height:30px; 
+        min-width: 200px">Invoice
+        </button>
+
+{{!-- download="StelStay-Lease.docx" --}}
+<a href="https://docs.google.com/document/d/1QWiE2A6eWhNetFoSu0ZOXpwQEMgKLMk7/edit?usp=sharing&ouid=103510465381666993261&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" >
+        <button type="button" style="    top:50%;
+        background-color:#395159;
+        color: #EFEFEF;
+        border:none; 
+        border-radius:10px; 
+        padding:15px;
+        min-height:30px; 
+        min-width: 200px">Lease
+        </button>
+</a>
+    </div>
+<br>
+
+{{!-- end of manage account --}}
+
+{{outlet}}
+
+<div style="text-align: center;">
+        <p>ex. render invoice here when clicked with appropiate information</p>
+        all of the options above need to be child routes and generate below once clicked upon (except lease) - the template for invoice.hbs has already been created. So when a user clicks on it the invoice template needs to display below
+</div>
+<br>
+{{!-- start of invoice section --}}
+<div id="invoice">
+<div class="jumbo" style="text-align: center; font-size: 32.5%; background:#d5d7da; color: rgb(0, 0, 0); padding-bottom:15px; padding-top:40px">
+  <h2>Invoice</h2>
+</div>
+
+<div class="jumbo" style="background-color:#f3f3f3">
+<h2 style="text-align: center; color: #000202 ">StelStay Properties (Pty) Ltd</h2>
+</div>
+
+<div class="container-cp">
+    <div class="box-1cp">
+       <h3>Room type:</h3>
+       <h4>xxxx (retrieve room type from pb)</h4>
+       <br>
+       <h3>Room number:</h3>
+       <h4>xxxx (retrieve room number from pb)</h4>
+       <br>
+       <h3>Email:</h3>
+       <h4>xxxx (retrieve email from pb)</h4>
+    </div>
+
+    <div class="box-2cp">
+       <h3>Bill Payer:</h3>
+       <h4>xxxx (retrieve bill payer from pb)</h4>
+       <br>
+       <h3>Outstanding Amount:</h3>
+       <h4>xxxx (retrieve outstanding amount from pb)</h4>
+       <br>
+       {{!-- <h3>Date</h3>
+       <h4><span id="datetime"></span></h4>
+            <script>
+            var dt = new Date();
+            document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+            </script> --}}
+    </div>
+
+</div>
+<br>
+<div style="padding-left: 100px;">
+        <h3>Date:</h3>
+
+<h4>
+<py-script>
+from datetime import date
+
+today = date.today()
+print(today)
+
+def getTotalDays():
+    a = a = date(date.today().year, 2, 1)
+    b = date(date.today().year, 11, 30)
+    diff =  str(b-a)
+    arr = diff.split(" ")
+    diff = int(arr[0]) + 1
+    return str(diff)
+
+def getDaysLeft():
+    a = date.today()
+    b = date(date.today().year, 11, 30)
+    diff =  str(b-a)
+    arr = diff.split(" ")
+    diff = int(arr[0])
+    return str(diff)
+
+print("Resident has been staying at StelStay for " + getTotalDays() +" days" )
+print("Check out in "+getDaysLeft()+" days")
+</py-script>
+</h4>
+
+</div>
+
+
+</div>
+{{!-- invoice ends --}}
+
+<br>
+<div style="padding-left: 100px;">
+<button onClick="window.location.reload();" style="text-align: center;
+top:50%;
+        background-color:#c1c1c1;
+        color: black;
+        border:none; 
+        border-radius:10px; 
+        padding:15px;
+        min-height:30px; 
+        min-width: auto
+">Fix Date</button>
+</div>
+<br><br>
+
+
+<div style="padding-left: 100px; padding-right: 100px">
+        <button id="print" style="    
+        top:50%;
+        background-color:#000000;
+        color: #EFEFEF;
+        border:none; 
+        border-radius:10px; 
+        padding:15px;
+        min-height:30px; 
+        min-width: 100%" type="button">Print Invoice
+        </button>
+
+        {{!-- print invoice logic --}}
+        <script>
+            const printBtn = document.getElementById('print'); 
+
+            printBtn.addEventListener('click', function(){
+                console.log("generated invoice")
+                window.print(); 
+            })
+        </script>
+
+</div>
+
+<br><br>
+{{!-- end of invoice section --}}
+
+
+{{!-- <p>progress bar:</p> --}}
+
